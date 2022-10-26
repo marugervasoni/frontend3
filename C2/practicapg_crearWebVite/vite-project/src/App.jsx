@@ -1,22 +1,18 @@
-// CLASE 2-------------------------------------------------------------
-import logoReact from './assets/react.svg'
-import foto from './assets/satisfied.png'
+// CLASE 4-------------------------------------------------------------
+
+// Crear un componente usando prop children y fragment, y enviar una variable que contenga
+// un nombre como prop e inserte un children escrito Hello. Devolver el mensaje, por ejemplo:
+// Hola Juan. Recordemos que Hola son los niños y Juan es enviado como prop.
 import './App.css'
+import ChildComponent from './C4/mesa-trabajo-pg/Components/ChildComponent'
 
-function App() {
-
+const App = () => {
   return (
-    <div className="App">
-      <div>
-        <h1>Hello React</h1>
-        <img src={logoReact} className="logo react" alt="React logo" />
-      </div>
-      <div>
-        <img src={foto} alt="React logo" />
-      </div>
+    <div>
+      {/* nombre como prop */}
+      <ChildComponent nombre="Maria"/>
     </div>
   )
 }
 
 export default App
-
