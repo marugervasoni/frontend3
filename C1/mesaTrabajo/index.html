@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend III Ejercicio práctico clase 1</title>
+    <!-- LINKS CDN: traen librerias de react a utilizar (react y react dom) -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"crossorigin></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/javascript">
+
+    function contenido(){    
+        let contenidos = [
+    //CREATE ELEMENT: metodo CREADOR al que le pasamos 3 args:
+    // -tipo elem html; -propieds del elem; -contenido dentro del elem
+        React.createElement("h1", null,"Con lo visto hasta ahora"),
+        React.createElement("h2", null,"Replica este HTML"),
+        React.createElement("h3", null,"Usando"),
+        React.createElement("h4", null,"React.js"),
+        React.createElement("footer", null,"Suerte!"),  
+    ];
+     return contenidos
+    };
+    //RENDER: p renderizar elem a introducir en 1 ELEM HTML
+    // -no crea + de 1 elemento --> mejor crearlos antes, llamarlo x ej en 1 funcion.
+        ReactDOM.render(
+            contenido(),
+            document.getElementById('root'),
+        )    
+    </script>
+</body>
+</html>
